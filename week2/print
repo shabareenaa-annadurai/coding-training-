@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+void rec(char* a,int c,int n)
+{
+	printf("%s\t%d\n",a,c);
+	c++;
+	if(c<=n)
+	{
+		rec(a,c,n);
+	}
+}
+void main()
+{
+	int count=1,n;
+	char a[50];
+	printf("enter ur name:");
+	scanf("%s",a);
+	printf("\nhow many times do u want to print ur name:");
+	scanf("%d",&n);
+	rec(a,count,n);
+}
